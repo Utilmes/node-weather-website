@@ -12,7 +12,7 @@ wetherForm.addEventListener('submit', (e) => {
     messageOne.textContent = 'Loading...'
     messagetwo.textContent = ''
     
-    fetch('http://localhost:3000/weatherApp?search=' + location).then((response) => {
+    fetch( '/weatherApp?search=' + location).then((response) => {
         response.json().then((data) =>{
             if (data.error){
                 return messageOne.textContent =  data.error
