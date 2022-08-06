@@ -44,7 +44,7 @@ searchMyLocation.addEventListener('click', (e) => {
                 if (data.error){
                     return messageOne.textContent =  data.error
                 }
-                    messageOne.textContent = data.location
+                    messageOne.textContent = `The searched location can be found at: https://google.com/maps?q=${latitude},${longitude}`
                     messagetwo.textContent = data.forecastData
             })
         })
